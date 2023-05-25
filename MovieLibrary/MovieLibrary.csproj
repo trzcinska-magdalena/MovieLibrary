@@ -132,16 +132,26 @@
   <ItemGroup>
     <Compile Include="Api\MovieApi.cs" />
     <Compile Include="Models\Movie.cs" />
-    <Compile Include="Move.cs">
+    <Compile Include="Models\MovieShort.cs" />
+    <Compile Include="MovieDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Move.Designer.cs">
-      <DependentUpon>Move.cs</DependentUpon>
+    <Compile Include="MovieDetail.Designer.cs">
+      <DependentUpon>MovieDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForAMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForAMovie.Designer.cs">
+      <DependentUpon>SearchForAMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Move.resx">
-      <DependentUpon>Move.cs</DependentUpon>
+    <EmbeddedResource Include="MovieDetail.resx">
+      <DependentUpon>MovieDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForAMovie.resx">
+      <DependentUpon>SearchForAMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

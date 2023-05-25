@@ -5,34 +5,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MovieLibrary
 {
-    public partial class Move : Form
+    public partial class MovieDetail : Form
     {
         private readonly MovieApi _movieAppi = new MovieApi();
-     
-        public Move()
+        public MovieDetail(string title)
         {
             InitializeComponent();
+            getMovie(title);
         }
 
-        private async void searchButton_Click(object sender, EventArgs e)
+        private async void getMovie(string title)
         {
-            string title = searchTextBox.Text;
-            Console.WriteLine(title);
-            if(title == "")
-            {
-                return;
-            }
-
             Task<Movie> movieTask = _movieAppi.GetMovie(title);
             await Task.WhenAll(movieTask);
 
