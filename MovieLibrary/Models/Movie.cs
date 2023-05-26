@@ -22,5 +22,6 @@ namespace MovieLibrary.Models
         public string imdbRating { get; set; }
         public string imdbVotes { get; set; }
         public string Poster { get; set; }
+        public string Awards { get; set; }
     }
 }

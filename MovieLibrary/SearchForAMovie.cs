@@ -55,7 +55,6 @@ namespace MovieLibrary
                 {
                     Console.Write(panel.Name);
                     MovieDetail m = new MovieDetail(panel.Name);
-                    m.Show();
                 };
 
 
@@ -69,7 +68,6 @@ namespace MovieLibrary
                 {
                     Console.Write(panel.Name);
                     MovieDetail m = new MovieDetail(panel.Name);
-                    m.Show();
                 };
 
                 Label title = new Label();
@@ -82,7 +80,6 @@ namespace MovieLibrary
                 {
                     Console.Write(panel.Name);
                     MovieDetail m = new MovieDetail(panel.Name);
-                    m.Show();
                 };
 
                 Label type = new Label();

@@ -29,6 +29,7 @@ namespace MovieLibrary
             Movie movie = movieTask.Result;
 
             showData(movie);
+            this.Show();
         }
 
         private void showData(Movie movie)
@@ -40,10 +41,28 @@ namespace MovieLibrary
                 pictureBox1.ImageLocation = movie.Poster;
             }
 
-            titleLabel.Text = movie.Title;
-            descLabel.Text = movie.Plot;
             scoreLabel.Text = movie.imdbRating + "/10";
             usersLabel.Text = movie.imdbVotes;
+
+            titleLabel.Text = movie.Title;
+            descLabel.Text = movie.Plot;
+            
+            genreValue.Text = movie.Genre;
+            countryValue.Text = movie.Country;
+            runtimeValue.Text = movie.Runtime;
+            languageValue.Text = movie.Language;
+            directorValue.Text = movie.Director;
+
+            string[] actors = movie.Actors.Split(',');
+            actor1Value.Text = actors[0].Trim();
+            actor2Value.Text = actors[1].Trim();
+            actor3Value.Text = actors[2].Trim();
+
+            dvdValue.Text = movie.DVD;
+            releasedValue.Text = movie.Released;
+
+            //awardsValue.Text = movie.Awards.Substring();
+ 
         }
     }
 }
